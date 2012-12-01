@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			function validate() {
+				var a = document.getElementById('box');
+				var color = a.value;
+				if (color.match(/^#[a-fA-F0-9]{6}$/)) {
+					alert('Successfully validated');
+				} else {
+					alert('Please correct input');
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type = "text" id= "box" />
+		<input type = "button" onclick ="validate()" value = "Validate"/>
+	</body>
+</html>
