@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			function validate() {
+				var a = document.getElementById('box');
+				var hex= a.value;
+				if (hex.match(/^[a-fA-F0-9]{8}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{4}-[a-fA-F0-9]{12}$/m)) {
+					alert('Successfully validated');
+				} else {
+					alert('Please correct input');
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input type = "text" id= "box" />
+		<input type = "button" onclick ="validate()" value = "Validate"/>
+	</body>
+</html>
