@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript">
+			function validate() {
+				var IDs = [],res;
+				var a = document.getElementById('box');
+				var pass = a.value;
+				var reg = /<.*?id\s*=\s*["'](.+?)['"].*?>/g;
+				while(res = reg.exec(pass)){
+					if(IDs.indexOf(res[1])>-1) {
+						  alert("error"); return true;
+						 }
+    			IDs.push(res[1]);
+    			}
+				alert("ok"); return false;
+			}
+		</script>
+	</head>
+	<body>
+		<textarea id= "box" style = "width:500px; height:400px;"> </textarea>
+		<input type = "button" onclick ="validate()" value = "Validate"/>
+	</body>
+</html>
